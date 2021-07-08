@@ -1,0 +1,29 @@
+@import "reset.scss";
+@import "fonts.scss";
+@import "variables.scss";
+@import "mixins.scss";
+
+@import "landing/index.scss";
+
+body {
+  letter-spacing: 0em;
+  font-style: normal;
+  font-family: var(--font-body);
+
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: flex-start;
+  // @include flex-between;
+  // flex-direction: column;
+  // justify-content: flex-start;
+
+  width: 1440px;
+  height: 5189px;
+
+  background: #ffffff;
+
+  padding: 45.62px 0px 100px;
+  & > * {
+    margin-left: 150px;
+  }
+}

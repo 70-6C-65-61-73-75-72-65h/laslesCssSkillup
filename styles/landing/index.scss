@@ -1,0 +1,404 @@
+.header {
+  margin-right: 150px;
+  font-weight: var(--font-thin);
+  font-size: 16px;
+  line-height: 19px;
+  color: #4f5665;
+
+  width: 1140px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & .company {
+    &__logo {
+      display: inline-block;
+      width: 35px;
+      height: 36.23px;
+      background: url(../../assets/Logo.svg) no-repeat;
+      background-size: 35px;
+      vertical-align: middle;
+    }
+
+    &__name {
+      display: inline-block;
+
+      margin-left: 10px;
+      font-weight: var(--font-semibold);
+      font-size: 20px;
+      line-height: 24px;
+      color: #0b132a;
+      &_bold {
+        font-weight: var(--font-bold);
+      }
+
+      vertical-align: middle;
+    }
+  }
+
+  & .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 451px;
+  }
+
+  & .auth {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 233px;
+    &__link {
+      color: #0b132a;
+      font-weight: var(--font-semibold);
+    }
+    &__button {
+      width: 150px;
+      height: 45px;
+      border: 1px solid #f53855;
+      box-sizing: border-box;
+      border-radius: 50px;
+      color: #f53855;
+      text-align: center;
+      font-weight: var(--font-semibold);
+    }
+  }
+}
+
+// .main {
+//   display: contents;
+// }
+
+.heading {
+  @include flex-between;
+  margin-right: 83px;
+  margin-top: 88.49px;
+  &__illustration {
+    width: 611.24px;
+    height: 382.44px;
+    background: url(../../assets/Illustration1.svg) no-repeat;
+    background-size: 611.24px;
+  }
+
+  &__info {
+    width: 555px;
+  }
+
+  &__primary {
+    margin-top: 27.66px;
+    color: #0b132a;
+    font-size: 50px;
+    line-height: 70px;
+    font-weight: var(--font-semibold);
+    &_bold {
+      font-weight: var(--font-bold);
+    }
+  }
+
+  &__secondary {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 30px;
+    color: #4f5665;
+  }
+
+  &__button {
+    margin-top: 50px;
+
+    width: 250px;
+    height: 60px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: #f53838;
+    text-align: center;
+
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: var(--font-bold);
+    color: #ffffff;
+  }
+}
+
+.capacity {
+  box-shadow: 0px 20px 40px 0px rgba(0, 0, 255, 0.06);
+  @include flex-between;
+  justify-content: space-evenly;
+  margin-right: 150px;
+  margin-top: 103px;
+
+  height: 200px;
+
+  &__number {
+    font-size: 25px;
+    line-height: 30px;
+    color: #0b132a;
+    font-weight: var(--font-bold);
+  }
+
+  &__label {
+    font-size: 20px;
+    line-height: 30px;
+    color: #4f5665;
+    font-weight: var(--font-thin);
+  }
+
+  &__illustration {
+    width: 55px;
+    height: 55px;
+    background-size: 55px;
+    &.users {
+      background: url(../../assets/user.svg) no-repeat;
+    }
+    &.locations {
+      background: url(../../assets/location.svg) no-repeat;
+    }
+    &.servers {
+      background: url(../../assets/server.svg) no-repeat;
+    }
+  }
+
+  &__info {
+    margin-left: 36.5px;
+    &.users {
+    }
+  }
+
+  &__users,
+  &__locations,
+  &__servers {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 125.58px;
+  }
+
+  &__users,
+  &__locations {
+    border-right: 2px solid #eeeff2;
+  }
+
+  &__users {
+    width: 365.5px;
+  }
+  &__locations {
+    width: 430px;
+  }
+  &__servers {
+    width: 344.5px;
+  }
+}
+// if we use BEM with scss like
+// parent_block{
+// block {
+// &__elem {
+// }
+//  elem could not get props from its main parent ( block) but could from far parent
+// if we want to get props from main parent to elem -> should use it in classes in html like class='block block__elem'
+
+.features {
+  // box-shadow: 0px 20px 40px 0px rgba(0, 0, 255, 0.06);
+
+  @include flex-between;
+  margin-right: 150px;
+  margin-top: 95.83px;
+
+  &__info {
+  }
+
+  &__primary {
+    width: 383.41px;
+    font-weight: var(--font-semibold);
+    font-size: 35px;
+    line-height: 50px;
+    color: #0b132a;
+  }
+
+  &__secondary {
+    font-weight: var(--font-thin);
+    font-size: 16px;
+    line-height: 30px;
+    color: #4f5665;
+  }
+
+  &__secondary,
+  &__list {
+    width: 427.88px;
+    margin-top: 20px;
+  }
+
+  &__list {
+    font-weight: var(--font-thin);
+    font-size: 14px;
+    line-height: 30px;
+    color: #4f5665;
+
+    &-text {
+      vertical-align: middle;
+    }
+
+    &-icon {
+      margin-right: 10px;
+      vertical-align: middle;
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background-size: 24px;
+      background: url(../../assets/GreenVector.svg) no-repeat;
+    }
+  }
+
+  &__illustration {
+    width: 508.12px;
+    height: 414.71px;
+    background-size: 508.12px;
+    background: url(../../assets/Illustration2.svg) no-repeat;
+  }
+}
+
+.plan {
+  margin-left: 0px;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-self: flex-start;
+  align-items: center;
+
+  &__primary {
+    margin-top: 80.27px;
+    font-weight: var(--font-semibold);
+    font-size: 35px;
+    line-height: 50px;
+    color: #0b132a;
+  }
+  &__secondary {
+    margin-top: 20px;
+    width: 555px;
+    font-weight: var(--font-thin);
+    font-size: 16px;
+    line-height: 30px;
+    color: #4f5665;
+  }
+  &__variants {
+    margin-top: 60px;
+    height: 760px;
+    width: 1090px;
+
+    @include flex-between;
+
+    & > &-free,
+    &-standard,
+    &-premium {
+      border: 2px solid #dddddd;
+      box-sizing: border-box;
+      border-radius: 10px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      width: 330px;
+
+      & > * {
+        display: flex;
+      }
+
+      & .img {
+        margin-top: 79.63px;
+        width: 144.9px;
+        height: 165.37px;
+        background-size: 144.9px;
+        background: url(../../assets/present.svg) no-repeat;
+      }
+
+      & .name {
+        margin-top: 30px;
+        font-weight: var(--font-semibold);
+        font-size: 18px;
+        line-height: 30px;
+        color: #0b132a;
+      }
+
+      // todo component-style
+      & .list {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: left;
+        margin-top: 30px;
+
+        font-weight: var(--font-thin);
+        font-size: 14px;
+        line-height: 30px;
+        color: #4f5665;
+
+        & > li {
+          margin-bottom: 10px;
+        }
+
+        &-text {
+          vertical-align: middle;
+          display: inline;
+        }
+
+        &-icon {
+          margin-right: 10px;
+          vertical-align: middle;
+          display: inline-block;
+          width: 24px;
+          height: 24px;
+          background-size: 24px;
+          background: url(../../assets/VectorPlan.svg) no-repeat;
+        }
+      }
+
+      & .bottom {
+        display: flex;
+        margin-top: auto;
+        flex-direction: column;
+        margin-bottom: 60px;
+        // justify-content: flex-start;
+
+        &-pricing {
+          font-weight: var(--font-semibold);
+          font-size: 25px;
+          line-height: 30px;
+          color: #0b132a;
+          & .month {
+            color: #4f5665;
+          }
+        }
+
+        &-button {
+          vertical-align: middle;
+          width: 177.88px;
+          height: 45px;
+          margin-top: 20px;
+          font-weight: var(--font-bold);
+          font-size: 16px;
+          line-height: 19px;
+          color: #f53838;
+          border: 2px solid #f53838;
+          box-sizing: border-box;
+          border-radius: 50px;
+        }
+      }
+    }
+
+    &-premium {
+      & .bottom {
+        &-button {
+          background: #f53838;
+          color: #ffffff;
+          border: none;
+          // border-radius: 50px;
+        }
+      }
+    }
+    // &-free, &-standard {
+
+    // }
+    // @include flex-between;
+  }
+}
